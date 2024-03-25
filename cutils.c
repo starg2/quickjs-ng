@@ -783,7 +783,6 @@ void js_cond_init(js_cond_t* cond) {
     if (pthread_condattr_init(&attr))
         abort();
 
-
     if (pthread_condattr_setclock(&attr, CLOCK_MONOTONIC))
         abort();
 
