@@ -746,6 +746,7 @@ int js_cond_timedwait(js_cond_t* cond, js_mutex_t* mutex, uint64_t timeout) {
 }
 
 #else /* !defined(_WIN32) */
+
 void js_once(js_once_t* guard, void (*callback)(void)) {
     if (pthread_once(guard, callback))
         abort();
